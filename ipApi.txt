@@ -1,0 +1,16 @@
+IP : 192.168.0.36
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+    var ip = "192.168.0.36";
+    var api_key = "at_oG9blD1X6BKQcENOB8FHVws1pOg2c";
+    $(function () {
+       $.ajax({
+           url: "https://geo.ipify.org/api/v1",
+           data: {apiKey: api_key, ipAddress: ip},
+           success: function(data) {
+               $("body").append("<pre>"+ JSON.stringify(data,"",2)+"</pre>");
+           }
+       });
+    });
+</script>

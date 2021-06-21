@@ -1,0 +1,323 @@
+:root {
+    /* Color */
+    --white-color: #fff;
+    --black-color: #140a00;
+    --blue-color: #045fd4;
+    --red-color: #ff0000;
+    --grey-dark-color: #909090;
+    --grey-light-color: #e0e0e0;
+    /* Size */
+    --padding: 12px;
+    --avatar-size: 36px;
+
+    /* Font Size */
+    --font-large: 24px;
+    --font-medium: 20px;
+    --font-small: 14px;
+    --font-micro: 12px;
+}
+
+body {
+    position: none;
+}
+
+
+ul {
+    list-style:none;
+}
+
+
+#lat {
+    padding-top: 150px;
+
+}
+
+/* 화면의 크기가 768px이하 일 때 */
+@media screen and (max-width: 768px) {
+    .all_box {
+        text-align: center;
+        width: 600px;      
+        display: table; 
+        margin: 0 auto;
+        z-index: 5;
+        position: relative;
+    }
+
+    .search_info{
+        width: 350px;
+        height: 350px;
+        background-color: white;
+        z-index: 20;
+        top: 140px;
+        left: 120px;
+        opacity: 0.9;
+        position: absolute;
+        display: flex;
+        margin: 0 auto;  
+        border-radius:0.5em;
+        -moz-border-radius: 0.5em;
+        -webkit-border-radius: 0.5em;
+        box-shadow: 5px 5px 1px var(--grey-light-color);
+    }
+    .ip_info {
+        flex-direction: column;
+        align-items: flex-start;
+        display: flex;
+        font-size: var(--font-small);
+        margin: 0 auto;
+        
+    }
+
+    .ip_info .li_ip {
+        border-bottom: solid 1px var(--grey-light-color);
+    }
+    
+    .ip_info .li_location {
+        border-bottom: solid 0.5px var(--grey-light-color);
+    }
+    
+    .ip_info .li_time {
+        border-bottom: solid 0.5px var(--grey-light-color);
+        margin-bottom: 10px;
+    }
+
+    .ip_info span {
+        
+        width: 170px;
+        height: 70px;
+        color: var(--grey-dark-color);
+        font-weight: initial;
+        text-align: center;
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-right: 10px;
+        
+    }
+    
+    .ip_info div {
+        padding-top: 5px;
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .top_search {
+        width: 100%;
+        height: 350px;
+        /*background-color: black;*/
+        background-image: url('../images/pattern-bg.png');
+        opacity: 0.9;
+    }
+    
+    
+    .title {
+        text-align: center;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        font-size: var(--font-medium);
+        color: var(--white-color);
+    
+    
+    }
+    
+    .search {
+        margin: 0 auto;   
+        width: 500px;
+        /*background-color: var(--white-color);*/
+        /*border-radius:0.5em;
+        -moz-border-radius: 0.5em;
+        -webkit-border-radius: 0.5em;*/
+    
+    }
+    
+    .search .input {
+        border-style: none;
+        width: 350px;
+        height: 42px;
+        padding-left: 15px;
+        font-size: var(--font-small);
+        border-radius:0.5em;
+        -moz-border-radius: 0.5em;
+        -webkit-border-radius: 0.5em;
+    }
+    
+    .search .input:focus {
+        outline:none;  
+    }
+    
+    
+    .search .btn {
+        border-style: none;
+        background-color: black;
+        color: white;
+        width: 44px;
+        height: 44px;
+        border-radius:0.5em;
+        -moz-border-radius: 0.5em;
+        -webkit-border-radius: 0.5em;
+        font-weight: bolder;
+        font-size: var(--font-small);
+        cursor: pointer;
+    }
+    
+    div .bottom_map {
+        z-index: 5;
+        height: 800px;
+        /*background-color: beige;*/
+    }
+    
+    #mapid { 
+        height: 800px;
+        z-index: 5;
+    }
+    
+    
+}
+
+/* 화면의 크기가 768px이상 일 때 */
+@media screen and (min-width: 768px) {
+    .all_box {
+        text-align: center;
+        width: 1000px;
+        position: relative;
+        display: table; 
+        margin: 0 auto;
+        z-index: 5;
+    }
+    
+    .search_info {
+        background-color: white;
+        z-index: 20;
+        opacity: 0.9;
+        top: 150px;
+        left: 100px;
+        width: 800px;
+        height: 120px;
+        position: absolute;
+        display: flex;
+        margin: 0 auto;   
+        border-radius:0.5em;
+        -moz-border-radius: 0.5em;
+        -webkit-border-radius: 0.5em;
+        box-shadow: 5px 5px 1px var(--grey-light-color);
+         
+    }
+    
+    .ip_info { 
+        display: flex;
+        font-size: var(--font-small);
+        padding-top: 18px;
+     
+    }
+
+    .ip_info .li_ip {
+        border-right: solid 1px var(--grey-light-color);
+    }
+    
+    .ip_info .li_location {
+        border-right: solid 0.5px var(--grey-light-color);
+    }
+    
+    .ip_info .li_time {
+        border-right: solid 0.5px var(--grey-light-color);
+    }
+
+    .ip_info span {
+        width: 170px;
+        height: 70px;
+        color: var(--grey-dark-color);
+        font-weight: initial;
+        text-align: left;
+        padding-top: 10px;
+        padding-left: 20px;
+        padding-right: 10px;
+        
+    }
+    
+    .ip_info div {
+        padding-top: 5px;
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .top_search {
+        max-width: 1000px;
+        height: 230px;
+        /*background-color: black;*/
+        background-image: url('../images/pattern-bg.png');
+        opacity: 0.9;
+    }
+    
+    
+    .title {
+        text-align: center;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        font-size: var(--font-medium);
+        color: var(--white-color);
+    
+    
+    }
+    
+    .search {
+        margin: 0 auto;   
+        width: 500px;
+        /*background-color: var(--white-color);*/
+        /*border-radius:0.5em;
+        -moz-border-radius: 0.5em;
+        -webkit-border-radius: 0.5em;*/
+    
+    }
+    
+    .search .input {
+        border-style: none;
+        width: 350px;
+        height: 42px;
+        padding-left: 15px;
+        font-size: var(--font-small);
+        border-radius:0.5em;
+        -moz-border-radius: 0.5em;
+        -webkit-border-radius: 0.5em;
+    }
+    
+    .search .input:focus {
+        outline:none;  
+    }
+    
+    
+    .search .btn {
+        border-style: none;
+        background-color: black;
+        color: white;
+        width: 44px;
+        height: 44px;
+        border-radius:0.5em;
+        -moz-border-radius: 0.5em;
+        -webkit-border-radius: 0.5em;
+        font-weight: bolder;
+        font-size: var(--font-small);
+        cursor: pointer;
+    }
+    
+
+    div .bottom_map {
+        z-index: 5;
+        height: 500px;
+        max-width: 1000px;
+        /*background-color: beige;*/
+    }
+    
+    #mapid { 
+        max-width: 1000px;
+        height: 500px;
+        z-index: 5;
+    }
+    
+
+}
+    
+
+
+
+
