@@ -166,11 +166,14 @@ ul {
         /*background-color: beige;*/
     }
     
-    #mapid { 
+    /* #mapid { 
         height: 800px;
         z-index: 5;
-    }
-    
+    } */
+    #map {
+        height: 100%;
+        z-index: 5;
+      }
     
 }
 
@@ -313,6 +316,10 @@ ul {
         height: 500px;
         z-index: 5;
     }
+    #map {
+        height: 100%;
+        z-index: 5;
+      }
     
 
 }
